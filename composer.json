@@ -1,0 +1,31 @@
+{
+    "name": "sgfoot/sglogs",
+    "description": "This is php log mini library by html view",
+    "type": "library",
+    "keywords":["log"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sgfoot",
+            "email": "freeit@126.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/yezihack/sglogs.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">= 5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sgfoot\\":"src/"
+        },
+        "files": [
+            "src/function.php"
+        ]
+    }
+}
