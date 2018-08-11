@@ -5,7 +5,7 @@
 - 实用于php,其它语法可改写
 - 支持主题切换
 - 兼容手机查看
-
+- composer require sgfoot/sglogs
 
 ## DEMO在线实例
 [时光日志](http://sglogs.sgfoot.com/)
@@ -29,7 +29,6 @@ location /logs/ {
                 autoindex_localtime on;
                 break;
         }
-
 ```
 ## 文件目录 
 ```html
@@ -38,7 +37,7 @@ location /logs/ {
 |-- index.html
 |-- README.md
 |-- CHANGE.md
-|-- lib
+|-- src
 |   |-- SgLogs.php
 |-- logs
 `-- example
@@ -57,6 +56,7 @@ location /logs/ {
 ```
 
 ## 使用方法:
+* 默认访问日志帐号/密码:sglogs/sglogs
 
 ### 1.简单使用
 ```php
@@ -133,6 +133,15 @@ define('SGLOGS_THEME', 'default');//底色为黑色
 ### 10.自带函数,全局操作
 ```angular2html
 sglogs('数据', 'flag')
+
+```
+
+### 11.设置访问密码
+```php
+#必须是php后缀 define('SGLOGS_TYPE', 'php')
+define('SGLOGS_USER', 'sglogs');
+define('SGLOGS_PASS', 'sglogs')
+
 ```
 
 ## 效果图
