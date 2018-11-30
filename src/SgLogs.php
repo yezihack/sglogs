@@ -522,8 +522,8 @@ html;
         $md5         = md5($flag);
         $time        = time();
         $date        = date('Y-m-d H:i:s', $time);
-        $file        = $_SERVER["PHP_SELF"];//当前处理页面
-        $queryParams = $_SERVER['QUERY_STRING'];
+        $file        = isset($_SERVER["PHP_SELF"]) ? $_SERVER["PHP_SELF"] : '';//当前处理页面
+        $queryParams = isset($_SERVER['QUERY_STRING']) ? $_SERVER['QUERY_STRING'] : '';
         $data        = self::getObCache($data);
         return sprintf($html, $md5, $flag, $time, $date, $file, $queryParams, $flag, SGLOGS_THEME, $data);
     }
